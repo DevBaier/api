@@ -4,7 +4,6 @@ import { Server, IncomingMessage, ServerResponse } from 'http';
 
 import buildDockerbRoutes from "./modules/routes/build/docker";
 import playerRoutes from "./modules/routes/steam/player";
-import scgRoutes from "./modules/routes/steam/steamcoordinator";
 import statsRoutes from "./modules/routes/steam/stats";
 import statusRoutes from "./modules/routes/status";
 
@@ -16,7 +15,6 @@ const server: FastifyInstance<
 
 server.register(fastifyBlipp);
 server.register(buildDockerbRoutes);
-server.register(scgRoutes);
 server.register(statsRoutes);
 server.register(playerRoutes);
 server.register(statusRoutes);
